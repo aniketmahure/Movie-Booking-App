@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<h1 style="text-align: center;" class="font-style">Admin Dashboard</h1>
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-md-6 offset-md-3">
+                <mat-card style="background-color: rgb(241, 239, 232);">
+                    <mat-card-content>
+                        <h1 class="text-center">Delete Movie</h1>
+                        <form (ngSubmit)="formSubmit()">
+                            <!-- username -->
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Enter Movie Name</mat-label>
+                                <input 
+                                required
+                                [(ngModel)] ="user.loginId"
+                                name="movieName"
+                                matInput placeholder="Enter movie Here">
+                            </mat-form-field>
+                            <div class="container text-center">
+                                <button type="submit" style="margin-right: 10px;" mat-raised-button color="primary">Delete</button>
+                            </div>
+                        </form>
+                    </mat-card-content>
+                </mat-card>
+                <br>
+                <mat-card style="background-color: rgb(241, 239, 232);">
+                    <mat-card-content>
+                        <h1 class="text-center">Update Ticket Status</h1>
+                        <form (ngSubmit)="formSubmit()">
+                            <!-- username -->
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Enter Movie Name</mat-label>
+                                <input 
+                                required
+                                [(ngModel)] ="user.loginId"
+                                name="movieName"
+                                matInput placeholder="Enter movie Here">
+                            </mat-form-field>
+                            <div class="container text-center">
+                                <button type="submit" style="margin-right: 10px;" mat-raised-button color="primary">Update</button>
+                            </div>
+                        </form>
+                    </mat-card-content>
+                </mat-card>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
