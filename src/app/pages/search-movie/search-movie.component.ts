@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./search-movie.component.css']
 })
 export class SearchMovieComponent {
-  constructor(private userService:UserService){}
+  constructor(private userService:UserService,public loginService:LoginService){}
   public movieName="";
   movies : {
     position: number,

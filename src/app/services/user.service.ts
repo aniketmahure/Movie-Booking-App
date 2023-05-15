@@ -22,7 +22,13 @@ export class UserService {
   public serachMovie(movieName:any){
     return this.http.get('http://localhost:8080/api/v1.0/moviebooking/movies/search/'+movieName)
   }
-  public updateTicketStatus(movie:any){
-    return this.http.put('http://localhost:8080/api/v1.0/moviebooking/'+movie.name+'/update/'+movie._id,movie.name);
+  public updateTicketStatus(movieName:any,id:any){
+    return this.http.put('http://localhost:8080/api/v1.0/moviebooking/'+movieName+'/update/'+id,movieName,{responseType: 'text'});
+  }
+  public deleteMovie(movieName:any){
+    return this.http.delete('http://localhost:8080/api/v1.0/moviebooking/'+movieName+'/delete',{responseType: 'text'});
+  }
+  public bookTicket(user:any){
+    return this.http.post('http://localhost:8080/api/v1.0/moviebooking/'+user.movieName+'/add',user,{responseType: 'text'});
   }
 }

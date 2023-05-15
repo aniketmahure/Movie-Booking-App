@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -7,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent {
-  constructor(private userService:UserService){}
+  constructor(private userService:UserService,private router:Router,public loginService:LoginService){}
   movies : {
     position: number,
     movieName: string,
@@ -35,8 +37,10 @@ export class MoviesComponent {
     );
       
   }
-  onClickBuyTicket(){
-    console.log("Buying Ticket");
-    window.location.href='/api/v1.0/moviebooking/add';
+  onClickBuyTicket(value:any){
+    console.log("Buying Ticket "+value);
+    localStorage.setItem('movieToBook',value);
+    this.router.navigate(['/api/v1.0/moviebooking/add'])
   }
+
 }

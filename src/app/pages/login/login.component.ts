@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
 import { UserService } from 'src/app/services/user.service';
 import Swal from 'sweetalert2';
@@ -9,7 +10,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private loginService:LoginService){}
+  constructor(private loginService:LoginService,private router:Router){}
   public user = {
     loginId: '',
     password:''
@@ -27,19 +28,19 @@ export class LoginComponent {
     this.loginService.login(this.user).subscribe(
       (data:any)=>{
         //sucess
-        console.log(data);
+        console.log(JSON.stringify(data));
         this.loginService.setUsername(data.username);
         this.loginService.saveToken(data.accessToken);
         this.loginService.setRole(data.roles[0]);
         console.log("role from localstorage -"+this.loginService.getRole())
         console.log("username from localstorage -"+this.loginService.getUsername())
         console.log("token from localstorage -"+this.loginService.getToken())
-        Swal.fire('Success',' Login Succesful','success');
+        Swal.fire('Login Succesful',this.user.loginId+' is Login','success');
         if(this.loginService.getRole() == "admin"){
-          window.location.href='/api/v1.0/moviebooking/admin'
+          this.router.navigate(['/api/v1.0/moviebooking/admin']);
         }
         else if(this.loginService.getRole() == "user"){
-            window.location.href='/api/v1.0/moviebooking/all'
+          this.router.navigate(['/api/v1.0/moviebooking/all']);
         }
         else{
           this.loginService.logout();

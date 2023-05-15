@@ -4,30 +4,30 @@
    </a>
    <span class="font-style"><b>Movie Booking</b></span>
    
-   <span style="padding-left: 540px;" class="example-spacer"></span>
+   <span style="padding-left: 490px;" class="example-spacer"></span>
 
-   <label *ngIf="!loginService.adminLoggedIn()" class="font-style">Admin</label>
-  <a *ngIf="!loginService.adminLoggedIn()" href="api/v1.0/moviebooking/login" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+   <label style="position: relative;" *ngIf="!loginService.adminLoggedIn()" class="font-style">Admin</label>
+  <a style="position: relative;" *ngIf="!loginService.adminLoggedIn()" href="api/v1.0/moviebooking/login" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
     <mat-icon>lock</mat-icon>
   </a>
   
-  <label *ngIf="loginService.adminLoggedIn()" class="font-style">Dashboard</label>
-  <a *ngIf="loginService.adminLoggedIn()" href="api/v1.0/moviebooking/admin" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <label style="position: relative;" *ngIf="loginService.adminLoggedIn()" class="font-style">Dashboard</label>
+  <a style="position: relative;" *ngIf="loginService.adminLoggedIn()" href="api/v1.0/moviebooking/admin" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
     <mat-icon>dashboard</mat-icon>
   </a>
 
-   <label class="font-style">Search</label>
-   <a href="api/v1.0/moviebooking/search" mat-icon-button aria-label="Example icon-button with heart icon">
+   <label style="position: relative;" class="font-style">Search</label>
+   <a style="position: relative;" href="api/v1.0/moviebooking/search" mat-icon-button aria-label="Example icon-button with heart icon">
     <mat-icon>search</mat-icon>
    </a>
 
-   <label class="font-style">Movies</label>
-   <a href="api/v1.0/moviebooking/all" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+   <label style="position: relative;" class="font-style">Movies</label>
+   <a style="position: relative;" href="api/v1.0/moviebooking/all" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
     <mat-icon>movie filter</mat-icon>
    </a>
 
-  <label *ngIf="loginService.userLoggedIn()" class="font-style">Buy Ticket</label>
-  <a *ngIf="loginService.userLoggedIn()" href="api/v1.0/moviebooking/add" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <label style="position: relative;" *ngIf="loginService.userLoggedIn()" class="font-style">Buy Ticket</label>
+  <a style="position: fixed;" *ngIf="loginService.userLoggedIn()" href="api/v1.0/moviebooking/add" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
     <mat-icon>shop</mat-icon>
   </a>
 

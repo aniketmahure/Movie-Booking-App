@@ -5,7 +5,7 @@
             <div class="col-md-6 offset-md-3">
                 <mat-card style="background-color: rgb(241, 239, 232);">
                     <mat-card-content>
-                        <h1 class="text-center">Login Here</h1>
+                        <h1 class="font-style">Login Here</h1>
                         <form (ngSubmit)="formSubmit()">
                             <!-- username -->
                             <mat-form-field class="full-width" appearance="outline">
@@ -34,6 +34,11 @@
                         <div class="full-width" style="text-align: center;">
                             <a href="http://localhost:4200/api/v1.0/moviebooking/forgot"><button style="justify-content: center;"  mat-raised-button color="accent">Forgot Password</button></a>
                             
+                        </div>
+                        <br>
+                        <div class="full-width" style="text-align: center;">
+                            <label>If you are new then </label>
+                            <a href='/api/v1.0/moviebooking/register'>register</a>
                         </div>
                     </mat-card-content>
                 </mat-card>

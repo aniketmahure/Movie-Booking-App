@@ -12,11 +12,12 @@ export class AuthInterceptor implements HttpInterceptor{
         ): Observable<HttpEvent<any>> {
         //add JWT Token
         let authReq = req;
-        console.log("Inside Interceptor");
         const token=this.loginService.getToken();
+        
         if(token!=null){
+            console.log('Inside Interceptor, token :' +token);
             authReq = authReq.clone({
-                setHeaders : {Authorization : 'Bearer ${token}'},
+                setHeaders : {Authorization : 'Bearer '+token},
             });
         }
         return next.handle(authReq);
@@ -26,8 +27,8 @@ export class AuthInterceptor implements HttpInterceptor{
 //configurations
 export const authInterceptorProvider=[
     {
-        provide : HTTP_INTERCEPTORS,
-        useClass : AuthInterceptor,
+        provide : HTTP_INTERCEPTORS,//constant
+        useClass : AuthInterceptor,//useClass is a key
         multi : true,
     }
 ];

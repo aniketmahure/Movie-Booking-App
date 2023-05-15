@@ -44,7 +44,7 @@
         <td>{{arr.movieName}}</td>
         <td>{{arr.theaterName}}</td>
         <td>{{arr.ticketStatus}}</td>
-        <button (click)="onClickBuyTicket()" mat-raised-button color="primary">Book Ticket</button>
+        <button *ngIf="loginService.userLoggedIn()" (click)="onClickBuyTicket()" mat-raised-button color="primary">Book Ticket</button>
     </tr>
 </table>
   

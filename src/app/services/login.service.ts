@@ -32,6 +32,11 @@ export class LoginService {
     localStorage.removeItem("token")
     localStorage.removeItem("username")
     localStorage.removeItem("userRole")
+    localStorage.removeItem("movieToBook")
+    localStorage.removeItem("movieName")
+    localStorage.removeItem("seat")
+    localStorage.removeItem("seatNumber")
+    localStorage.removeItem("role")
     return true;
   }
   //get token
@@ -42,6 +47,10 @@ export class LoginService {
   //set user to local
   public setUsername(username:any){
     localStorage.setItem('username',username);
+  }
+  //set _id
+  public setId(id:any){
+    localStorage.setItem('_id',id);
   }
   //set user role to local
   public setRole(role:string){

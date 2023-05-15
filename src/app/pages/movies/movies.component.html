@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <h1 class="font-style" style="text-align: center;">All Movies</h1>
-<table style="padding-top: 20px; width: 100%;font-size: 20px;" class="mat-elevation-z8">
+<table style="padding-top: 20px; width: 100%;font-size: 20px;background-color: rgb(241, 239, 232);" class="mat-elevation-z8">
     <tr style="border: 20px;">
         <td><b>No.</b></td>
         <td><b>Movie Name</b></td>
@@ -13,7 +13,7 @@
         <td >{{arr.movieName}}</td>
         <td >{{arr.theaterName}}</td>
         <td >{{arr.ticketStatus}}</td>
-        <button (click)="onClickBuyTicket()" mat-raised-button color="primary">Book Ticket</button>
+        <button *ngIf="loginService.userLoggedIn()" (click)="onClickBuyTicket(arr.movieName)" mat-raised-button color="primary">Book Ticket</button>
     </tr>
     <br>
 </table>

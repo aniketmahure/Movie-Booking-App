@@ -37,7 +37,6 @@ const routes: Routes = [
     path:'api/v1.0/moviebooking/update',
     component:UpdateTicketStatusComponent,
     pathMatch:'full',
-    canActivate:[AdminGuard]
   },
   {
     path:'api/v1.0/moviebooking/search',

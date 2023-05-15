@@ -7,14 +7,14 @@
                 <mat-card style="background-color: rgb(241, 239, 232);">
                     <mat-card-content>
                         <h1 class="text-center">Delete Movie</h1>
-                        <form (ngSubmit)="formSubmit()">
+                        <form (ngSubmit)="onSubmitDelete()">
                             <!-- username -->
                             <mat-form-field class="full-width" appearance="outline">
                                 <mat-label>Enter Movie Name</mat-label>
                                 <input 
                                 required
-                                [(ngModel)] ="user.loginId"
-                                name="movieName"
+                                [(ngModel)] ="deleteMovieName"
+                                name="deleteMovieName"
                                 matInput placeholder="Enter movie Here">
                             </mat-form-field>
                             <div class="container text-center">
@@ -27,13 +27,13 @@
                 <mat-card style="background-color: rgb(241, 239, 232);">
                     <mat-card-content>
                         <h1 class="text-center">Update Ticket Status</h1>
-                        <form (ngSubmit)="formSubmit()">
-                            <!-- username -->
+                        <form (ngSubmit)="onSubmitUpdate()">
+                            <!-- movie nasme to delete movie -->
                             <mat-form-field class="full-width" appearance="outline">
                                 <mat-label>Enter Movie Name</mat-label>
                                 <input 
                                 required
-                                [(ngModel)] ="user.loginId"
+                                [(ngModel)] ="movieName"
                                 name="movieName"
                                 matInput placeholder="Enter movie Here">
                             </mat-form-field>

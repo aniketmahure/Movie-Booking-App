@@ -28,6 +28,7 @@ import { authInterceptorProvider } from './services/auth.interceptor';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatToolbarModule,
     MatIconModule,
     MatTableModule,
-    MatDividerModule
+    MatDividerModule,
+    MatGridListModule
   ],
   providers: [authInterceptorProvider],
   bootstrap: [AppComponent]
