@@ -1,0 +1,198 @@
+2023-05-18 10:51:25.997  INFO 25788 --- [restartedMain] com.rbp.movieapp.MovieappApplication     : Starting MovieappApplication using Java 17.0.5 on LTIN269983 with PID 25788 (C:\Users\2062989\Project\Movie Booking App\movieapp\target\classes started by 2062989 in C:\Users\2062989\Project\Movie Booking App\movieapp)
+2023-05-18 10:51:26.355 DEBUG 25788 --- [restartedMain] com.rbp.movieapp.MovieappApplication     : Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-05-18 10:51:26.369  INFO 25788 --- [restartedMain] com.rbp.movieapp.MovieappApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-05-18 10:51:27.750  INFO 25788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-18 10:51:27.752  INFO 25788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-18 10:51:42.071  INFO 25788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-05-18 10:51:43.024  INFO 25788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 916 ms. Found 4 MongoDB repository interfaces.
+2023-05-18 10:51:55.131  INFO 25788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-18 10:51:55.237  INFO 25788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-18 10:51:55.237  INFO 25788 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-05-18 10:51:56.708  INFO 25788 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-18 10:51:56.710  INFO 25788 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 28951 ms
+2023-05-18 10:52:04.456  INFO 25788 --- [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.5+9-LTS-191"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@1879848b], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@3d82008]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@7d6c6785], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-05-18 10:52:04.779  INFO 25788 --- [cluster-rtt-ClusterId{value='6465b5fa38e04d4e496d8bed', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:14}] to localhost:27017
+2023-05-18 10:52:04.808  INFO 25788 --- [cluster-ClusterId{value='6465b5fa38e04d4e496d8bed', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:15}] to localhost:27017
+2023-05-18 10:52:04.811  INFO 25788 --- [cluster-ClusterId{value='6465b5fa38e04d4e496d8bed', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=427124800}
+2023-05-18 10:52:12.360 DEBUG 25788 --- [restartedMain] c.r.m.security.jwt.AuthTokenFilter       : Filter 'authenticationJwtTokenFilter' configured for use
+2023-05-18 10:52:12.532  INFO 25788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-18 10:52:25.016  INFO 25788 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-05-18 10:52:25.337  INFO 25788 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@62a66b8e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53f95349, org.springframework.security.web.context.SecurityContextPersistenceFilter@3cf925c9, org.springframework.security.web.header.HeaderWriterFilter@1dda3f59, org.springframework.web.filter.CorsFilter@238fd6d, org.springframework.security.web.authentication.logout.LogoutFilter@3d6bd72f, com.rbp.movieapp.security.jwt.AuthTokenFilter@75f8d069, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d4e3759, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67f81d2a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5798f661, org.springframework.security.web.session.SessionManagementFilter@5aa094da, org.springframework.security.web.access.ExceptionTranslationFilter@4c86869b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@51fc0259]
+2023-05-18 10:52:30.697  INFO 25788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-18 10:52:31.042  INFO 25788 --- [restartedMain] com.rbp.movieapp.MovieappApplication     : Started MovieappApplication in 72.043 seconds (JVM running for 79.152)
+2023-05-18 10:59:48.069  INFO 25788 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-18 10:59:48.070  INFO 25788 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-18 10:59:48.077  INFO 25788 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-05-18 10:59:51.149  INFO 25788 --- [http-nio-8080-exec-6] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:16}] to localhost:27017
+2023-05-18 10:59:52.897 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 10:59:53.015 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:00:36.713 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 11:00:36.826 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : listed the available movies with title:2012
+2023-05-18 11:00:40.144 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:00:40.157 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:18:31.787 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:18:31.806 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:19:32.618 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:19:32.681 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:20:09.889 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:20:09.906 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:21:30.895 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:21:30.933 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:22:06.880 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:22:06.894 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:27:10.787 DEBUG 25788 --- [http-nio-8080-exec-2] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:27:10.793 DEBUG 25788 --- [http-nio-8080-exec-2] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:28:48.975 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:28:48.982 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:29:14.504 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:29:14.510 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:30:17.227 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:30:17.236 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:30:29.341 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:30:29.360 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:31:33.129 DEBUG 25788 --- [http-nio-8080-exec-2] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:31:33.137 DEBUG 25788 --- [http-nio-8080-exec-2] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:32:26.587 DEBUG 25788 --- [http-nio-8080-exec-10] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:32:26.595 DEBUG 25788 --- [http-nio-8080-exec-10] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:33:02.877 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:33:02.885 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 11:33:12.557 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 11:33:12.564 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 14:54:25.868 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 14:54:25.963 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 14:54:30.245 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 14:54:30.253 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 14:54:35.171 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 14:54:35.179 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 14:55:19.496 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 14:55:19.504 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 14:56:53.832 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 14:56:53.832 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 14:57:04.884 DEBUG 25788 --- [http-nio-8080-exec-4] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 14:57:04.981 DEBUG 25788 --- [http-nio-8080-exec-4] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 14:57:11.527 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 14:57:11.543 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 14:58:32.482 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 14:58:32.521 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 14:59:04.665 DEBUG 25788 --- [http-nio-8080-exec-2] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 14:59:04.771 DEBUG 25788 --- [http-nio-8080-exec-2] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 14:59:47.739 DEBUG 25788 --- [http-nio-8080-exec-10] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 14:59:47.795 DEBUG 25788 --- [http-nio-8080-exec-10] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 14:59:54.901 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 14:59:54.909 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:00:03.884 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:00:03.884 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:00:19.174 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:00:19.181 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:03:23.450 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:03:23.458 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:04:02.008 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:04:02.016 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:05:17.269 DEBUG 25788 --- [http-nio-8080-exec-10] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:05:17.317 DEBUG 25788 --- [http-nio-8080-exec-10] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:06:53.843 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:06:53.851 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:07:25.917 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 15:07:25.968 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : listed the available movies with title:2012
+2023-05-18 15:10:30.396 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:10:30.420 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:10:38.625 DEBUG 25788 --- [http-nio-8080-exec-2] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 15:10:38.633 DEBUG 25788 --- [http-nio-8080-exec-2] c.r.movieapp.controller.MovieController  : listed the available movies with title:2012
+2023-05-18 15:13:10.653 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:13:10.661 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:13:15.610 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:13:15.618 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:13:18.509 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:13:18.509 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:14:03.257 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:14:03.265 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:29:03.710 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:29:03.726 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:29:06.243 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:29:06.251 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:29:12.131 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:29:12.139 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:29:30.998 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:29:31.014 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:29:36.649 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:29:36.665 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:34:39.289 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:34:39.297 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:34:42.065 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 15:34:42.073 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : listed the available movies with title:avenger 1
+2023-05-18 15:34:46.319 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : user2 entered to book tickets
+2023-05-18 15:34:46.488  INFO 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : available tickets 110
+2023-05-18 15:34:46.529 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : user2 booked 2 tickets
+2023-05-18 15:34:46.883 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:34:46.931 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:35:45.604 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:35:45.612 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 15:35:47.427 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 15:35:47.443 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : listed the available movies with title:avenger 1
+2023-05-18 15:35:51.172 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : user entered to book tickets
+2023-05-18 15:35:51.204  INFO 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : available tickets 108
+2023-05-18 15:35:51.212 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : user booked 2 tickets
+2023-05-18 15:35:51.364 DEBUG 25788 --- [http-nio-8080-exec-4] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 15:35:51.372 DEBUG 25788 --- [http-nio-8080-exec-4] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:07:32.192 DEBUG 25788 --- [http-nio-8080-exec-2] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:07:32.199 DEBUG 25788 --- [http-nio-8080-exec-2] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:10:52.069 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:10:52.073 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:11:44.408 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:11:44.413 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:12:00.929 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:12:00.933 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:12:38.675 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:12:38.678 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:13:35.334 DEBUG 25788 --- [http-nio-8080-exec-4] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:13:35.338 DEBUG 25788 --- [http-nio-8080-exec-4] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:13:59.346 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:13:59.350 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:14:22.333 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:14:22.337 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:14:46.249 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:14:46.255 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:16:09.487 DEBUG 25788 --- [http-nio-8080-exec-10] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:16:09.492 DEBUG 25788 --- [http-nio-8080-exec-10] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:16:22.288 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:16:22.292 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:16:54.060 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:16:54.064 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:17:33.208 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:17:33.215 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:17:39.588 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 16:17:39.595 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : listed the available movies with title:2012
+2023-05-18 16:20:35.593 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 16:20:35.598 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : listed the available movies with title:2012
+2023-05-18 16:20:46.782 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 16:20:46.788 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : listed the available movies with title:avengers
+2023-05-18 16:21:24.811 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 16:21:24.816 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : listed the available movies with title:avenger
+2023-05-18 16:21:25.695 DEBUG 25788 --- [http-nio-8080-exec-2] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 16:21:25.701 DEBUG 25788 --- [http-nio-8080-exec-2] c.r.movieapp.controller.MovieController  : listed the available movies with title:avenger
+2023-05-18 16:21:25.889 DEBUG 25788 --- [http-nio-8080-exec-10] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 16:21:25.893 DEBUG 25788 --- [http-nio-8080-exec-10] c.r.movieapp.controller.MovieController  : listed the available movies with title:avenger
+2023-05-18 16:21:26.069 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 16:21:26.073 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : listed the available movies with title:avenger
+2023-05-18 16:21:26.259 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 16:21:26.265 DEBUG 25788 --- [http-nio-8080-exec-6] c.r.movieapp.controller.MovieController  : listed the available movies with title:avenger
+2023-05-18 16:21:26.439 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 16:21:26.445 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : listed the available movies with title:avenger
+2023-05-18 16:21:26.619 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 16:21:26.623 DEBUG 25788 --- [http-nio-8080-exec-1] c.r.movieapp.controller.MovieController  : listed the available movies with title:avenger
+2023-05-18 16:21:26.761 DEBUG 25788 --- [http-nio-8080-exec-4] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 16:21:26.767 DEBUG 25788 --- [http-nio-8080-exec-4] c.r.movieapp.controller.MovieController  : listed the available movies with title:avenger
+2023-05-18 16:21:37.943 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 16:21:37.947 DEBUG 25788 --- [http-nio-8080-exec-5] c.r.movieapp.controller.MovieController  : listed the available movies with title:dem
+2023-05-18 16:21:51.382 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 16:21:51.386 DEBUG 25788 --- [http-nio-8080-exec-8] c.r.movieapp.controller.MovieController  : listed the available movies with title:demo
+2023-05-18 16:22:15.279 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:22:15.284 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:25:49.047 DEBUG 25788 --- [http-nio-8080-exec-10] c.r.movieapp.controller.MovieController  : here search a movie by its name
+2023-05-18 16:25:49.054 DEBUG 25788 --- [http-nio-8080-exec-10] c.r.movieapp.controller.MovieController  : listed the available movies with title:2012
+2023-05-18 16:25:51.069 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:25:51.077 DEBUG 25788 --- [http-nio-8080-exec-3] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:34:20.655 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:34:20.661 DEBUG 25788 --- [http-nio-8080-exec-7] c.r.movieapp.controller.MovieController  : listed the available movies
+2023-05-18 16:34:50.197 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : here u can access all the available movies
+2023-05-18 16:34:50.202 DEBUG 25788 --- [http-nio-8080-exec-9] c.r.movieapp.controller.MovieController  : listed the available movies
