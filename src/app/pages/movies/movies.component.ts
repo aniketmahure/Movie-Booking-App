@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
 import { UserService } from 'src/app/services/user.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-movies',
@@ -39,8 +40,16 @@ export class MoviesComponent {
   }
   onClickBuyTicket(value:any){
     console.log("Buying Ticket "+value);
-    localStorage.setItem('movieToBook',value);
-    this.router.navigate(['/api/v1.0/moviebooking/add'])
+    let flag = false;
+    this.movies.forEach(function (movie){
+      if(value == movie.movieName && movie.ticketStatus == "SOLD OUT"){
+        flag = true;
+        Swal.fire('Cannot Book','This Movie is Sold Out','info');
+      }
+    })
+    if(!flag){
+      localStorage.setItem('movieToBook',value);
+      this.router.navigate(['/api/v1.0/moviebooking/add'])
+    }
   }
-
 }

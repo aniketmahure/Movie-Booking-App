@@ -19,7 +19,6 @@ import { ForgotComponent } from './pages/forgot/forgot.component';
 import { MoviesComponent } from './pages/movies/movies.component';
 import { BookingComponent } from './pages/booking/booking.component';
 import { DeleteMovieComponent } from './pages/delete-movie/delete-movie.component';
-import { UpdateTicketStatusComponent } from './pages/update-ticket-status/update-ticket-status.component';
 import { SearchMovieComponent } from './pages/search-movie/search-movie.component';
 import { HomeComponent } from './pages/home/home.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -29,6 +28,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MoviesComponent,
     BookingComponent,
     DeleteMovieComponent,
-    UpdateTicketStatusComponent,
     SearchMovieComponent,
     HomeComponent,
     DashboardComponent
@@ -61,7 +60,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatIconModule,
     MatTableModule,
     MatDividerModule,
-    MatGridListModule
+    MatGridListModule,
+    MatMenuModule
   ],
   providers: [authInterceptorProvider],
   bootstrap: [AppComponent]

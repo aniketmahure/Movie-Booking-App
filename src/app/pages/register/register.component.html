@@ -5,7 +5,7 @@
             <div class="col-md-6 offset-md-3">
                 <mat-card style="background-color: rgb(241, 239, 232);">
                     <mat-card-content>
-                        <h1 class="text-center">Get Started with Registration</h1>
+                        <h1 class="text-center" style="font-family: Copperplate Gothic Light;">Get Started with Registration</h1>
                         <form (ngSubmit)="formSubmit()">
                             <!-- username -->
                             <mat-form-field class="full-width" appearance="outline">
@@ -67,9 +67,23 @@
                                 name="password"
                                 type="password" minlength="6" matInput placeholder="Enter Password">
                             </mat-form-field>
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Confirm Password</mat-label>
+                                <input 
+                                required
+                                [(ngModel)]="user.confirmPassword"
+                                name="confirmPassword"
+                                type="password" minlength="6" matInput placeholder="Enter Confirm Password">
+                            </mat-form-field>
                             <div class="container text-center">
-                                <button type="submit" style="margin-right: 30px;" mat-raised-button color="primary">Register</button>
-                                <button type="reset" style="margin-left: 30px;" mat-raised-button color="accent">Reset</button>
+                                <button type="submit" style="margin-right: 10%;" mat-raised-button color="primary">Register</button>
+                                <button type="reset" style="margin-left: 10%;" mat-raised-button color="accent">Reset</button>
+                                
+                            </div>
+                            <br>
+                            <div style="text-align: center;">
+                                If Already User then ... 
+                                <a href="api/v1.0/moviebooking/login" >Login</a>
                             </div>
                         </form>
                     </mat-card-content>

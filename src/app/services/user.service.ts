@@ -14,7 +14,7 @@ export class UserService {
   }
   //forgot password
   public forgot(user:any){
-    return this.http.put('http://localhost:8080/api/v1.0/moviebooking/'+user.loginId+'/forgot',user)
+    return this.http.put('http://localhost:8080/api/v1.0/moviebooking/'+user.loginId+'/forgot',user,{responseType: 'text'})
   }
   public allMovies(){
     return this.http.get('http://localhost:8080/api/v1.0/moviebooking/all');
@@ -30,5 +30,8 @@ export class UserService {
   }
   public bookTicket(user:any){
     return this.http.post('http://localhost:8080/api/v1.0/moviebooking/'+user.movieName+'/add',user,{responseType: 'text'});
+  }
+  public getallbookedtickets(movieName : any){
+    return this.http.get('http://localhost:8080/api/v1.0/moviebooking/getallbookedtickets/'+movieName);
   }
 }

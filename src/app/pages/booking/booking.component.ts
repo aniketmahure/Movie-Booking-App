@@ -53,27 +53,32 @@ export class BookingComponent {
     });
     this.user.seatNumber = seats;
     this.user.noOfTickets = this.user.seatNumber.length;
-    console.log("movie Name = "+this.user.movieName);
-    console.log("theatre Name = "+this.user.theatreName);
-    console.log("no of tikets ="+this.user.noOfTickets);
-    console.log("Login Id = "+this.user.loginId);
-    console.log("seatNumber = "+this.user.seatNumber);
-    console.log("Submitted");
-    this.userService.bookTicket(this.user).subscribe(
-      (data: any)=>{
-        Swal.fire('Booked',data,'success');
-        console.log(data);
-      },
-      (error: any)=>{
-        Swal.fire('Error Occured',error.error ,'info');
-        console.log(JSON.stringify(error));
-        this.router.navigate(['/api/v1.0/moviebooking/add']);
-      }
-    );
-    this.clicked = [];
-    this.user.seatNumber = [];
-    this.temp = [];
-    this.router.navigate(['/api/v1.0/moviebooking/all']);
+    if(this.user.seatNumber.length != 0){
+      console.log("movie Name = "+this.user.movieName);
+      console.log("theatre Name = "+this.user.theatreName);
+      console.log("no of tikets ="+this.user.noOfTickets);
+      console.log("Login Id = "+this.user.loginId);
+      console.log("seatNumber = "+this.user.seatNumber);
+      console.log("Submitted");
+      this.userService.bookTicket(this.user).subscribe(
+        (data: any)=>{
+          Swal.fire('Booked',data,'success');
+          console.log(data);
+          this.router.navigate(['/api/v1.0/moviebooking/all']);
+        },
+        (error: any)=>{
+          Swal.fire('Error Occured',error.error ,'info');
+          console.log(JSON.stringify(error));
+          this.router.navigate(['/api/v1.0/moviebooking/add']);
+        }
+      );
+      this.clicked = [];
+      this.user.seatNumber = [];
+      this.temp = [];
+    }
+    else{
+      Swal.fire('Provide Input','Select Seats of the Movies','info')
+    }
   }
   remove(){
     this.clicked = [];

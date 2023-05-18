@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
 import { UserService } from 'src/app/services/user.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-search-movie',
@@ -8,7 +10,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./search-movie.component.css']
 })
 export class SearchMovieComponent {
-  constructor(private userService:UserService,public loginService:LoginService){}
+  constructor(private userService:UserService,public loginService:LoginService,private router:Router){}
   public movieName="";
   movies : {
     position: number,
@@ -19,7 +21,10 @@ export class SearchMovieComponent {
   ngOnInit() : void {}
   search(){
     this.movies = [];
-    console.log("Movie "+this.movieName+" is Searched");
+    if(this.movieName == ''|| this.movieName == undefined)
+    Swal.fire('',"Enter Movie Name",'info');
+    else{
+      console.log("Movie "+this.movieName+" is Searched");
     this.userService.serachMovie(this.movieName).subscribe(
       (data:any) =>{
         let count = data.length;
@@ -33,13 +38,26 @@ export class SearchMovieComponent {
         console.log("from search-movies Componenet"+this.movies);
       },
       (error)=>{
+        Swal.fire('',"Movie Not Found",'info');
         console.log("from search-movies Componenet :"+error);
       }
     );
+    }
     console.log("Searching Movie");
   }
-  onClickBuyTicket(){
+  onClickBuyTicket(movieToBook:any){
     console.log("Buying Ticket");
-    window.location.href='/api/v1.0/moviebooking/add';
+    let flag = false;
+    this.movies.forEach(function (movie){
+      if(movieToBook == movie.movieName && movie.ticketStatus == "SOLD OUT"){
+        flag = true;
+        Swal.fire('Cannot Book','This Movie is Sold Out','info');
+      }
+    })
+    if(!flag){
+      localStorage.setItem('movieToBook',movieToBook);
+      this.router.navigate(['/api/v1.0/moviebooking/add'])
+      // window.location.href('/api/v1.0/moviebooking/add');
+    }
   }
 }

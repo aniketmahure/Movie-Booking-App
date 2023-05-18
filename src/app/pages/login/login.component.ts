@@ -18,14 +18,18 @@ export class LoginComponent {
 
   ngOnInit():void {}
   formSubmit(){
+    let flag=false;
     if(this.user.loginId == ''|| this.user.loginId == null){
       alert("Enter Username !");
+      flag=true;
     }
     if(this.user.password == ''|| this.user.password == null){
       alert("Enter password !");
+      flag=true;
     }
-    console.log(this.user)
-    this.loginService.login(this.user).subscribe(
+    if(!flag){
+      console.log(this.user)
+      this.loginService.login(this.user).subscribe(
       (data:any)=>{
         //sucess
         console.log(JSON.stringify(data));
@@ -37,7 +41,7 @@ export class LoginComponent {
         console.log("token from localstorage -"+this.loginService.getToken())
         Swal.fire('Login Succesful',this.user.loginId+' is Login','success');
         if(this.loginService.getRole() == "admin"){
-          this.router.navigate(['/api/v1.0/moviebooking/admin']);
+          this.router.navigate(['/api/v1.0/moviebooking/update']);
         }
         else if(this.loginService.getRole() == "user"){
           this.router.navigate(['/api/v1.0/moviebooking/all']);
@@ -50,8 +54,9 @@ export class LoginComponent {
       (error)=>{
         //failure
         console.log(error)
-        Swal.fire('Oops!', 'Something went wrong while login!','error');
-      }
-    );
+        Swal.fire('Invalid Credentials', 'Something went wrong while login!','error');
+        }
+      );
+    }
   }
 }

@@ -1,79 +1,68 @@
 <app-navbar></app-navbar>
 <div class="bootstrap-wrapper">
     <div class="container">
-        <div class="row" style="margin-top: 30px;">
+        <div class="row" style="margin-top: 20px;">
             <div class="col-md-6 offset-md-3">
                 <mat-card style="background-color: rgb(241, 239, 232);">
                     <mat-card-content style="text-align: center;">
-                        <h1 class="text-center">Movie Name : {{user.movieName}}</h1>
-                        <h2 class="text-center">Theatre Name : {{user.theatreName}}</h2>
+                        <h1 class="text-center" style="font-family: Copperplate Gothic Light;">Movie Name : {{user.movieName}}</h1>
+                        <h2 class="text-center" style="font-family: Copperplate Gothic Light;">Theatre Name : {{user.theatreName}}</h2>
                         <form (ngSubmit)="formSubmit()">
-                            <mat-grid-list style="background-color: rgb(253, 221, 226);" cols="7" rowHeight="2:1">
-                                <mat-grid-tile >
-                                    <tr
-                                    (click)="onToggle(1,'A1')"
-                                    [style.background-color]="clicked[1] ? 'green' :  'rgb(253, 221, 226'"
-                                    name="A1">
-                                    A1
-                                    </tr>
-                                </mat-grid-tile>    
-                                <mat-grid-tile>
-                                    <tr
-                                    (click)="onToggle(2,'A2')"
-                                    [style.background-color]="clicked[2] ? 'green' :  'rgb(253, 221, 226'"
-                                    name="A2">
-                                    A2
+                            <mat-grid-list  cols="7" rowHeight="1:1">
+                                <mat-grid-tile name="t1" *ngFor="let datum of [1,2,3,4,5,6,7]; let i = index">
+                                    <tr>
+                                    <label (click)="onToggle(i,'A'+i)"
+                                    [style.background-color]="clicked[i] ? 'green' :  'rgb(253, 221, 226'">A{{i}}</label>
                                     </tr>
                                 </mat-grid-tile>
-                                <mat-grid-tile>
-                                    <tr
-                                    (click)="onToggle(3,'A3')"
-                                    [style.background-color]="clicked[3] ? 'green' : ' rgb(253, 221, 226'"
-                                    name="A1">
-                                    A3
+                                
+                                <mat-grid-tile name="t2" *ngFor="let n of [8,9,10,11,12,13,14]; let j = index">
+                                    <tr>
+                                        <label
+                                            (click)="onToggle(n,'B'+j)"
+                                            [style.background-color]="clicked[n] ? 'green' :  'rgb(253, 221, 226'">
+                                            B{{j}}
+                                        </label> 
                                     </tr>
+                                </mat-grid-tile> 
+                               <mat-grid-tile *ngFor="let n of [15,16,17,18,19,20,21]; let i = index">
+                                    <tr> 
+                                    <label
+                                        (click)="onToggle(n,'D'+i)"
+                                        [style.background-color]="clicked[n] ? 'green' :  'rgb(253, 221, 226'">
+                                        D{{i}}
+                                </label></tr>
                                 </mat-grid-tile>
-                                <mat-grid-tile>A4</mat-grid-tile>
-                                <mat-grid-tile>A5</mat-grid-tile>
-                                <mat-grid-tile>A6</mat-grid-tile>
-                                <mat-grid-tile>A7</mat-grid-tile>
-                                <mat-grid-tile>B1</mat-grid-tile>
-                                <mat-grid-tile>B2</mat-grid-tile>
-                                <mat-grid-tile>B3</mat-grid-tile>
-                                <mat-grid-tile>B4</mat-grid-tile>
-                                <mat-grid-tile>B5</mat-grid-tile>
-                                <mat-grid-tile>B6</mat-grid-tile>
-                                <mat-grid-tile>B7</mat-grid-tile>
-                                <mat-grid-tile>C1</mat-grid-tile>
-                                <mat-grid-tile>C2</mat-grid-tile>
-                                <mat-grid-tile>C3</mat-grid-tile>
-                                <mat-grid-tile>C4</mat-grid-tile>
-                                <mat-grid-tile>C5</mat-grid-tile>
-                                <mat-grid-tile>C6</mat-grid-tile>
-                                <mat-grid-tile>C7</mat-grid-tile>
-                                <mat-grid-tile></mat-grid-tile>
-                                <mat-grid-tile>D1</mat-grid-tile>
-                                <mat-grid-tile>D2</mat-grid-tile>
-                                <mat-grid-tile>D3</mat-grid-tile>
-                                <mat-grid-tile>D4</mat-grid-tile>
-                                <mat-grid-tile>D5</mat-grid-tile>
-                                <mat-grid-tile></mat-grid-tile>
-                                <mat-grid-tile></mat-grid-tile>
-                                <mat-grid-tile>E1</mat-grid-tile>
-                                <mat-grid-tile>E2</mat-grid-tile>
-                                <mat-grid-tile>E3</mat-grid-tile>
-                                <mat-grid-tile>E4</mat-grid-tile>
-                                <mat-grid-tile>E5</mat-grid-tile>
-                                <mat-grid-tile></mat-grid-tile>
                             </mat-grid-list>
-                            <label class="text-center" style="text-align: center;">--Screen--</label>
+                            <mat-grid-list   cols="5" rowHeight="2:1"> 
+                                <mat-grid-tile *ngFor="let n of [22,23,24,25,26]; let i = index">
+                                    <tr> 
+                                    <label
+                                        (click)="onToggle(n,'E'+i)"
+                                        [style.background-color]="clicked[n] ? 'green' :  'rgb(253, 221, 226'">
+                                        E{{i}}
+                                    </label>
+                                    </tr>
+                                </mat-grid-tile> 
+                                <mat-grid-tile *ngFor="let n of [27,28,29,30,31]; let i = index">
+                                    <tr> 
+                                        <label
+                                            (click)="onToggle(n,'F'+i)"
+                                            [style.background-color]="clicked[n] ? 'green' :  'rgb(253, 221, 226'">
+                                            F{{i}}
+                                        </label>
+                                    </tr>
+                                </mat-grid-tile>     
+                            </mat-grid-list>
+                            <h2 class="text-center" style="text-align: center;font-family: Copperplate Gothic Light;">--Screen--</h2>
                             <div class="container text-center">
                                 <button type="submit" style="margin-right: 10px;" mat-raised-button color="primary">Book Ticket</button>
-                                <button (click)="remove()" style="margin-left: 10px;" mat-raised-button color="accent">Rest</button>
+                                <button type="reset" (click)="remove()" style="margin-left: 10px;" mat-raised-button color="accent">Rest</button>
                             </div>
                         </form>
                     </mat-card-content>
                 </mat-card>
+                <br>
             </div>
         </div>
     </div>

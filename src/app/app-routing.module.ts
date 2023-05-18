@@ -9,7 +9,6 @@ import { LoginComponent } from './pages/login/login.component';
 import { MoviesComponent } from './pages/movies/movies.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SearchMovieComponent } from './pages/search-movie/search-movie.component';
-import { UpdateTicketStatusComponent } from './pages/update-ticket-status/update-ticket-status.component';
 import { AdminGuard } from './services/admin.guard';
 import { UserGuard } from './services/user.guard';
 
@@ -34,11 +33,6 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
-    path:'api/v1.0/moviebooking/update',
-    component:UpdateTicketStatusComponent,
-    pathMatch:'full',
-  },
-  {
     path:'api/v1.0/moviebooking/search',
     component:SearchMovieComponent,
     pathMatch:'full'
@@ -61,7 +55,7 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
-    path:'api/v1.0/moviebooking/admin',
+    path:'api/v1.0/moviebooking/update',
     component:DashboardComponent,
     pathMatch:'full',
     canActivate:[AdminGuard]

@@ -1,19 +1,13 @@
 <app-navbar></app-navbar>
 <br>
-<h1 style="text-align: center;"><b>Welcome to Movie Booking App</b></h1>
+<h1 style="text-align: center;font-family: Copperplate Gothic Light;"><b>Welcome to Movie Booking App</b></h1>
 <div class="bg">
     <div class="bootstrap-wrapper">
         <div class="container">
-            <div class="row" style="margin-top: 30px;">
-                <div class="col-md-6 offset-md-3" style="text-align: center;">
-                    <label class="font-style">Register</label>
-                    <a href="api/v1.0/moviebooking/register">
-                        <mat-icon style="color: white;margin-right: 300px;margin-top: 50px;">edit</mat-icon>
-                    </a>
-                    <label class="font-style">Login</label>
-                    <a href="api/v1.0/moviebooking/login" class="example-icon" aria-label="Example icon-button with share icon">
-                        <mat-icon style="color: white;padding-right: 30px;margin-top: 50px;">person</mat-icon>
-                    </a>   
+            <div style="margin-top: 30px;">
+                <div style="justify-content: center;text-align: center;">
+                    <button *ngIf="!loginService.adminLoggedIn() && !loginService.userLoggedIn()" style="margin-right: 30px; margin-top: 30px;" (click)='register()' mat-raised-button color="primary">Register</button>
+                    <button *ngIf="!loginService.adminLoggedIn() && !loginService.userLoggedIn()" style="margin-right: 30px;margin-top: 30px;" (click)='login()' mat-raised-button color="primary">Login</button>  
                 </div>
             </div>
         </div>

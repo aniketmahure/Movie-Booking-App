@@ -4,7 +4,12 @@
 .green {
     background-color: green;
 }
-
-.red {
-    background-color: red;
-}
+label {
+    width: 35px;
+    height: 35px;
+    /* border: 1px solid #000; */
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    padding: auto;;
+  }

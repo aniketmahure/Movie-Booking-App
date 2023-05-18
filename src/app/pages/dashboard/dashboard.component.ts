@@ -11,7 +11,17 @@ export class DashboardComponent {
   constructor(private userService:UserService){}
   public movieName ="";
   public deleteMovieName ="";
-  ngOnInit():void {}
+  tickets : {
+    position: number,
+    loginId: string,
+    movieName: string,
+    theaterName: string,
+    noOfTickets: number
+    seatNumber: string[],
+    }[] = [];
+  ngOnInit():void {
+    this.tickets = [];
+  }
   onSubmitDelete(){
     console.log(" delete movie ="+this.deleteMovieName);
     if(this.deleteMovieName == '' || this.deleteMovieName == null){
@@ -59,5 +69,33 @@ export class DashboardComponent {
       );
       this.movieName = ""
     }
+  }
+  public movieNameTicket = '';
+  onSubmitViewTickets(){
+    if(this.movieNameTicket != '' || this.movieNameTicket != undefined){
+      this.userService.getallbookedtickets(this.movieNameTicket).subscribe(
+        (data:any)=>{
+          let count = data.length;
+          let i=1
+          while(i <= count){
+            this.tickets.push({
+              position: i, movieName: data[i-1].movieName, theaterName: data[i-1].theatreName, loginId: data[i-1].loginId,noOfTickets:data[i-1].noOfTickets,seatNumber:data[i-1].seatNumber
+            });
+            console.log("all the tickets of movie "+this.movieNameTicket);
+            i++;
+          }
+          Swal.fire('','Displaying Booked Ticekets of '+this.movieNameTicket,'success')
+        },
+        (error)=>{
+          console.log(error)
+        }
+      )
+      this.tickets = [];
+    }
+    // this.movieNameTicket = ''
+  }
+  reset(){
+    this.tickets = [];
+    this.movieNameTicket = "";
   }
 }
