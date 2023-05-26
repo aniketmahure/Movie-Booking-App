@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "6450cb9b5d45d2ee1334a142"
+  },
+  "movieName": "2012",
+  "theatreName": "pvr",
+  "noOfTicketsAvailable": 120,
+  "ticketsStatus": "BOOK_ASAP"
+},{
+  "_id": {
+    "$oid": "6450cc045d45d2ee1334a143"
+  },
+  "movieName": "avengers",
+  "theatreName": "inox",
+  "noOfTicketsAvailable": 148,
+  "_class": "com.rbp.movieapp.models.Movie"
+}]

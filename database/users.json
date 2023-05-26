@@ -1,0 +1,83 @@
+[{
+  "_id": {
+    "$oid": "6450d44ff3bb6466a5f28527"
+  },
+  "loginId": "admin",
+  "firstName": "admin",
+  "lastName": "admin",
+  "email": "admin@gmail.com",
+  "contactNumber": {
+    "$numberLong": "9979348089"
+  },
+  "password": "$2a$10$6LEFwOGjVCp38JhP8q5VJes3H9k9x50FOE4HDGHPBNNbSdMYOcH96",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "6450d3ed5d45d2ee1334a156"
+      }
+    }
+  ],
+  "_class": "com.rbp.movieapp.models.User"
+},{
+  "_id": {
+    "$oid": "6450d47bf3bb6466a5f28528"
+  },
+  "loginId": "user",
+  "firstName": "user1",
+  "lastName": "user",
+  "email": "user@gmail.com",
+  "contactNumber": {
+    "$numberLong": "9979848089"
+  },
+  "password": "$2a$10$Gc4igutQretC2Epypu.UceOnd11/YvYIyCgN01QV7XH.Th99It8Z6",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "6450d4025d45d2ee1334a157"
+      }
+    }
+  ],
+  "_class": "com.rbp.movieapp.models.User"
+},{
+  "_id": {
+    "$oid": "645244137ac37d3bdc3af741"
+  },
+  "loginId": "Aniket",
+  "firstName": "Aniket",
+  "lastName": "M",
+  "email": "ani@gmail.com",
+  "contactNumber": 9090900,
+  "password": "$2a$10$BmD4tLypI5JT1LwRhSvi3eXmxwquD5p3F3kgFtRTFY6rL5x6KdLHG",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "6450d4025d45d2ee1334a157"
+      }
+    }
+  ],
+  "_class": "com.rbp.movieapp.models.User"
+},{
+  "_id": {
+    "$oid": "645352856081ebf870fa4532"
+  },
+  "loginId": "user2",
+  "firstName": "user2",
+  "lastName": "user2",
+  "email": "user2@gmail.com",
+  "contactNumber": {
+    "$numberLong": "9979848089"
+  },
+  "password": "$2a$10$5X.vT9XdIFe4mlXfRHnk3OqSQUUmCEVG6/P6Zi3krJ2yUB1g1tibi",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "6450d4025d45d2ee1334a157"
+      }
+    }
+  ],
+  "_class": "com.rbp.movieapp.models.User"
+}]
