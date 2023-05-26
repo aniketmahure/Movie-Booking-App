@@ -19,9 +19,11 @@ export class ForgotComponent {
   formSubmit(){
     if(this.user.loginId == ''|| this.user.loginId == null){
       alert("Enter Username !");
+      return "input username"
     }
     if(this.user.password == ''|| this.user.password == null || this.user.password.length < 7){
       alert("Enter valid password !");
+      return "input password"
     }
     console.log(this.user)
     this.userService.forgot(this.user).subscribe(
@@ -36,5 +38,6 @@ export class ForgotComponent {
         Swal.fire('Oops!', 'Something went wrong, password is not changed!','error');
       }
     );
+    return "Reset Password";
   }
 }

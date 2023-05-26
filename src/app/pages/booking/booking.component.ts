@@ -79,10 +79,12 @@ export class BookingComponent {
     else{
       Swal.fire('Provide Input','Select Seats of the Movies','info')
     }
+    return "Booking"
   }
   remove(){
     this.clicked = [];
     this.user.seatNumber = [];
     this.temp = []
+    return "All Input is refreshed"
   }
 }

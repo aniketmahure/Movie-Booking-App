@@ -1,23 +1,23 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { UserService } from 'src/app/services/user.service';
 
 import { ForgotComponent } from './forgot.component';
 
 describe('ForgotComponent', () => {
-  let component: ForgotComponent;
-  let fixture: ComponentFixture<ForgotComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ForgotComponent ]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(ForgotComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  let mockUserService:UserService;
+  let Booking : ForgotComponent;
+  
+  beforeEach(()=>{
+    Booking =  new ForgotComponent(mockUserService);
+  })
+  it('should say Input username', () => {
+    Booking.user.loginId = '';
+    let result = Booking.formSubmit();
+    expect(result).toBe("input username");
   });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should say Input Password', () => {
+    Booking.user.loginId='abc'
+    Booking.user.password = '';
+    let result = Booking.formSubmit();
+    expect(result).toBe("input password");
   });
 });

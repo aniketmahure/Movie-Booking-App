@@ -34,12 +34,7 @@
         <td><h2>Movie Name</h2></td>
         <td><h2>Theater Name</h2></td>
         <td><h2>Ticket Status</h2></td>
-    </tr>
-    <tr style="border: 12px;">
-        <td><mat-divider></mat-divider></td>
-        <td><mat-divider></mat-divider></td>
-        <td><mat-divider></mat-divider></td>
-        <td><mat-divider></mat-divider></td>
+        <td *ngIf="loginService.userLoggedIn()"><h2>Buy Tickets</h2></td>
     </tr>
     <span></span>
     <tr></tr>

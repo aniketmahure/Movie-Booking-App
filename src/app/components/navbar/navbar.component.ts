@@ -13,9 +13,11 @@ export class NavbarComponent {
   constructor(public loginService:LoginService,private router:Router){}
   ngOnInit():void {}
   userLogout(){
+    let logout = false;
     Swal.fire('Sign Out',this.loginService.getUsername()+' is log out','success');
     this.loginService.logout();
     this.router.navigate(["api/v1.0/moviebooking/home"]);
+    logout = true;
   }
   home(){
     this.router.navigate(['api/v1.0/moviebooking/home']);
@@ -33,6 +35,10 @@ export class NavbarComponent {
     this.router.navigate(['api/v1.0/moviebooking/forgot']);
   }
   login(){
+    this.router.navigate(['api/v1.0/moviebooking/login']);
+  }
+  admin(){
+    Swal.fire('Admin Access Only','Enter Admin Details','warning')
     this.router.navigate(['api/v1.0/moviebooking/login']);
   }
 }

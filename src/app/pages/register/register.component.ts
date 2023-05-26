@@ -19,7 +19,7 @@ export class RegisterComponent {
       password:'',
       confirmPassword:'',
       admin:false,
-      users:false,
+      users:true,
       roles:''
     }
 
@@ -30,37 +30,35 @@ export class RegisterComponent {
       if(this.user.loginId == '' || this.user.loginId == null){
         Swal.fire('','User Name is required !','info');
         flag = true;
-          return;
+        return "input username";
       }
       if(this.user.firstName == '' || this.user.firstName == null){
         Swal.fire('','First Name is required','info');
         flag = true;
-        return;
+        return "input firstname";
       }
       if(this.user.lastName == '' || this.user.lastName == null){
         Swal.fire('','Last Name is required !','info');
         flag = true;
-        return;
+        return "input lastname";
       }
       if(this.user.admin == false && this.user.users == false){
         Swal.fire('','Select Role !','info');
         flag = true;
-        return;
+        return "select role";
       }
       if(this.user.email == '' || this.user.email == null){
         Swal.fire('','Email is Required!','info');
         flag = true;
-        return;
+        return "input email";
       }
       if(this.user.contactNumber == '' || this.user.contactNumber == null || this.user.password.length<9){
         Swal.fire('','Enter Correct Contact Number','info');
         flag = true;
-        return;
       }
        if(this.user.password == '' || this.user.password == null || this.user.password.length < 7){
         Swal.fire('','Enter Valid Password!','info');
         flag = true;
-        return;
       }
       if(this.user.password == this.user.confirmPassword && !flag){
         if(this.user.admin == true){
@@ -88,5 +86,6 @@ export class RegisterComponent {
         Swal.fire('Oops!', 'Enter Correct Password!','error');
         this.user.confirmPassword =''
       }
+      return "registered";
     }
 }

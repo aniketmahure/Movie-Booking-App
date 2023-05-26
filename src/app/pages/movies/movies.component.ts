@@ -21,7 +21,6 @@ export class MoviesComponent {
     this.userService.allMovies().subscribe(
       (data:any) =>{
         let count = data.length;
-        console.log(data.length);
         let i=1
         while(i <= count){
           this.movies.push({
@@ -29,11 +28,11 @@ export class MoviesComponent {
           });
           i++;
         }
-        console.log("from movies Componenet :"+this.movies);
+        console.log("from movies Components");
       },
       (error)=>{
         let a: any=[];
-        console.log("from movies Componenet :"+error);
+        console.log("from movies Components :"+error);
       }
     );
       

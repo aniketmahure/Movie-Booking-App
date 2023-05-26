@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookingComponent } from './pages/booking/booking.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { DeleteMovieComponent } from './pages/delete-movie/delete-movie.component';
 import { ForgotComponent } from './pages/forgot/forgot.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -42,12 +41,6 @@ const routes: Routes = [
     component:BookingComponent,
     pathMatch:'full',
     canActivate:[UserGuard]
-  },
-  {
-    path:'api/v1.0/moviebooking/delete',
-    component:DeleteMovieComponent,
-    pathMatch:'full',
-    canActivate:[AdminGuard]
   },
   {
     path:'api/v1.0/moviebooking/home',

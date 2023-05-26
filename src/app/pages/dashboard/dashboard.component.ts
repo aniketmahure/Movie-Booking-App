@@ -26,6 +26,7 @@ export class DashboardComponent {
     console.log(" delete movie ="+this.deleteMovieName);
     if(this.deleteMovieName == '' || this.deleteMovieName == null){
       Swal.fire('No Input','Enter Movie Name','info');
+      return "No Input"
     }
     else{
       this.userService.deleteMovie(this.deleteMovieName).subscribe(
@@ -39,11 +40,14 @@ export class DashboardComponent {
         console.log("something went wrong!!"+JSON.stringify(error));
       }
       );
+      return 'movie deleted'
     }
+   
   }
   onSubmitUpdate(){
     if(this.movieName == '' || this.movieName == null){
       Swal.fire('No Input','Enter Movie Name','info');
+      return "No Input"
     }
     else{
       console.log(" update status = "+ this.movieName);
@@ -68,7 +72,9 @@ export class DashboardComponent {
         }
       );
       this.movieName = ""
+      return 'Status Update'
     }
+    
   }
   public movieNameTicket = '';
   onSubmitViewTickets(){
@@ -97,5 +103,6 @@ export class DashboardComponent {
   reset(){
     this.tickets = [];
     this.movieNameTicket = "";
+    return 'reset input'
   }
 }

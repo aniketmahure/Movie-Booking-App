@@ -10,7 +10,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
@@ -18,7 +17,6 @@ import {HttpClientModule} from '@angular/common/http';
 import { ForgotComponent } from './pages/forgot/forgot.component';
 import { MoviesComponent } from './pages/movies/movies.component';
 import { BookingComponent } from './pages/booking/booking.component';
-import { DeleteMovieComponent } from './pages/delete-movie/delete-movie.component';
 import { SearchMovieComponent } from './pages/search-movie/search-movie.component';
 import { HomeComponent } from './pages/home/home.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -34,13 +32,11 @@ import {MatMenuModule} from '@angular/material/menu';
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent,
     RegisterComponent,
     LoginComponent,
     ForgotComponent,
     MoviesComponent,
     BookingComponent,
-    DeleteMovieComponent,
     SearchMovieComponent,
     HomeComponent,
     DashboardComponent

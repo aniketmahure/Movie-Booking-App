@@ -1,23 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 import { BookingComponent } from './booking.component';
 
 describe('BookingComponent', () => {
-  let component: BookingComponent;
-  let fixture: ComponentFixture<BookingComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ BookingComponent ]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(BookingComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  let mockUserService:UserService;
+  let mockRouter : Router;
+  let Booking : BookingComponent;
+  
+  beforeEach(()=>{
+    Booking =  new BookingComponent(mockUserService,mockRouter);
+  })
+  it('should called without error', () => {
+    let result = Booking.formSubmit();
+    expect(result).toBe("Booking");
   });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should called without error', () => {
+    let result = Booking.remove();
+    expect(result).toBe("All Input is refreshed");
   });
 });
