@@ -1,5 +1,6 @@
 # Movieappfrontend
-
+See Requiremets of Application in Use Case PDF.
+This Application Satisfy 97% of Required things.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
 
 ## Development server
